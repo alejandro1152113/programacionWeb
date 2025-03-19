@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --success-color: #2ecc71;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --text-color: #333;
+    --border-radius: 6px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease-in-out;
+    --gradient-bg: linear-gradient(135deg, #3498db, #9b59b6);
+}
+
+body {
+    background-image: url('/programacionWeb-main/paginaweb/img/descarga.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--light-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: var(--box-shadow);
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--light-color);
+}
+
+.navbar .btn {
+    margin-left: auto;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    /* Añade un efecto de desenfoque */
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content {
+    background: var(--dark-color);
+    color: var(--light-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 12px 20px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin: 20px 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#studentsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#edit-container {
+    display: none;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#edit-form,
+#student-card {
+    flex: 1;
+    background: var(--light-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--dark-color);
+}
+
+#edit-form label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--dark-color);
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+}
